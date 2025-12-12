@@ -1,0 +1,54 @@
+/* HERO NEW BACKGROUND */
+.hero-section {
+    background: url("../img/hero-bg.jpg") center/cover no-repeat;
+    padding: 120px 0;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* STORY SECTION */
+.story-text {
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+}
+
+/* OFFER FULL-WIDTH BLOCKS */
+.offer-block .offer-item {
+    padding: 25px 20px;
+    background: var(--color-white);
+    border-left: 6px solid var(--color-accent);
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* SUCCESS STORIES STRIPES */
+.success-stripe {
+    border-top: 1px solid #df0b0b;
+    border-bottom: 1px solid #ac0202;
+}
+
+/* footer adjustment for follow us unable to see images only white color */
+/* SOCIAL ICONS – FIXED SIZE + CLEAN LOOK */
+.social-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-right: 12px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
