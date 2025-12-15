@@ -12,43 +12,112 @@
 
     <body>
 
-        <!-- Navigation Bar -->
-        <header id="mainHeader"
-            class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">MyBiz</a>
+        <!-- HEADER + HERO WRAPPER WITH ONE BACKGROUND IMAGE -->
+        <div class="hero-wrapper">
 
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <!-- Navigation Bar -->
+            <header id="mainHeader"
+                class="navbar navbar-expand-lg header-transparent">
+                <div class="container">
 
-                <div class="collapse navbar-collapse justify-content-end"
-                    id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active"
-                                href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                href="about.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                href="contact.html">Contact</a></li>
-                    </ul>
+                    <!-- LOGO -->
+                    <a
+                        class="navbar-brand d-flex align-items-center fw-bold text-white"
+                        href="index.html">
+                        <img src="img/logo.png" alt="MyBiz Logo"
+                            style="width: 140px; height: 69px;">
+                        <span class="ms-2" style="font-size: 22px;">Global
+                            Consulting Services</span>
+                    </a>
+
+                    <!-- Mobile Menu -->
+                    <button class="navbar-toggler bg-light" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Menu Items -->
+                    <div class="collapse navbar-collapse justify-content-end"
+                        id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a
+                                    class="nav-link active text-white"
+                                    href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-white"
+                                    href="about.html">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link text-white"
+                                    href="services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link text-white"
+                                    href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
                 </div>
-            </div>
-        </header>
+            </header>
+            <!-- NEW HERO SECTION -->
+            <section class="hero-modern d-flex align-items-center">
+                <div class="container">
+                    <div class="row align-items-center">
 
-        <!-- HERO SECTION -->
-        <section class="hero-section text-white d-flex align-items-center">
-            <div class="container text-center">
-                <h1 class="display-4 fw-bold mb-3">Welcome to MyBiz</h1>
-                <p class="lead mb-4">Transforming Businesses With Innovation,
-                    Technology, and Expertise</p>
-                <a href="contact.html" class="btn btn-light btn-lg">Get in Touch
-                    →</a>
-            </div>
-        </section>
+                        <!-- LEFT CONTENT -->
+                        <div class="col-lg-6 text-white mb-4 mb-lg-0">
+                            <span
+                                class="badge bg-warning text-dark mb-3 px-3 py-2 fw-semibold d-inline-flex align-items-center">
+                                <i class="bi bi-star-fill me-1"></i> Trusted by
+                                500+ Companies
+                            </span>
+
+                            <h1
+                                class="display-4 fw-bold mb-4 hero-title text-shadow">
+                                Transform Your <br>
+                                Business With <br>
+                                <span class="text-primary">Strategic
+                                    Consulting</span>
+                            </h1>
+
+                            <p class="lead mb-4 hero-subtitle">
+                                Empowering organizations worldwide with
+                                innovative solutions,
+                                strategic insights, and expert guidance to
+                                achieve sustainable
+                                growth and competitive advantage.
+                            </p>
+
+                            <div class="d-flex gap-3">
+                                <a href="contact.html"
+                                    class="btn btn-primary btn-lg shadow">Get in
+                                    Touch <i
+                                        class="bi bi-arrow-right ms-2"></i></a>
+                                <a href="services.html"
+                                    class="btn btn-outline-light btn-lg">Our
+                                    Services</a>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT HERO IMAGE -->
+                        <div class="col-lg-6 text-center">
+                            <div class="hero-img-wrapper position-relative">
+                                <img src="img/index2.jpg"
+                                    onerror="this.onerror=null;this.src='img/index2.png';"
+                                    class="img-fluid hero-side-img rounded shadow-lg"
+                                    alt="Consulting Team">
+
+                                <div
+                                    class="hero-badge shadow-lg bg-white rounded-pill p-3 position-absolute">
+                                    <h3
+                                        class="text-primary fw-bold mb-0">98%</h3>
+                                    <small class="text-muted">Client
+                                        Satisfaction</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- END HERO WRAPPER -->
 
         <!-- WHO WE ARE (3 cards layout) -->
         <section class="py-5 fade-in-on-scroll bg-light">
@@ -61,9 +130,11 @@
                         <div class="card h-100 shadow-sm p-3 text-center">
                             <h5 class="fw-bold">Our Story</h5>
                             <p>
-                                MyBiz began as a team of passionate innovators
+                                MyBiz began as a team of passionate
+                                innovators
                                 dedicated to helping businesses adopt modern
-                                technologies and grow confidently in the digital
+                                technologies and grow confidently in the
+                                digital
                                 era.
                             </p>
                         </div>
@@ -87,9 +158,11 @@
                             <h5 class="fw-bold">Mission & Vision</h5>
                             <p>
                                 Our mission is to empower businesses with
-                                scalable digital solutions, and our vision is to
+                                scalable digital solutions, and our vision
+                                is to
                                 become
-                                a global leader in consulting-driven innovation.
+                                a global leader in consulting-driven
+                                innovation.
                             </p>
                         </div>
                     </div>
@@ -98,15 +171,17 @@
             </div>
         </section>
 
-        <!-- WHAT WE OFFER (4 cards layout) -->
-        <section class="py-5 fade-in-on-scroll">
+        <section class="py-5 fade-in-on-scroll offer-icons">
             <div class="container">
                 <h2 class="fw-bold text-center mb-4">What We Offer</h2>
 
                 <div class="row g-4 text-center">
-
                     <div class="col-md-3">
-                        <div class="card h-100 shadow-sm p-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="icon-circle icon-1">
+                                <img src="img/icon_1.png"
+                                    alt="Application Modernization icon">
+                            </div>
                             <h5 class="fw-bold">Application Modernization</h5>
                             <p>
                                 Transform legacy systems using cloud-native and
@@ -117,7 +192,11 @@
                     </div>
 
                     <div class="col-md-3">
-                        <div class="card h-100 shadow-sm p-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="icon-circle icon-2">
+                                <img src="img/icon_2.png"
+                                    alt="Data & Analytics icon">
+                            </div>
                             <h5 class="fw-bold">Data & Analytics</h5>
                             <p>
                                 Unlock powerful insights through data-driven
@@ -128,7 +207,11 @@
                     </div>
 
                     <div class="col-md-3">
-                        <div class="card h-100 shadow-sm p-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="icon-circle icon-3">
+                                <img src="img/icon_3.png"
+                                    alt="Modern Workplace icon">
+                            </div>
                             <h5 class="fw-bold">Modern Workplace</h5>
                             <p>
                                 Boost workforce productivity and satisfaction
@@ -139,7 +222,11 @@
                     </div>
 
                     <div class="col-md-3">
-                        <div class="card h-100 shadow-sm p-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="icon-circle icon-4">
+                                <img src="img/icon_4.png"
+                                    alt="Salesforce Services icon">
+                            </div>
                             <h5 class="fw-bold">Salesforce Services</h5>
                             <p>
                                 Implement, customize, and optimize Salesforce to
@@ -148,20 +235,22 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-
-        <!-- SUCCESS STORIES (Card Layout) -->
-        <section class="py-5 fade-in-on-scroll bg-light">
+        <!-- OUR SUCCESS STORIES -->
+        <section class="py-5 bg-light fade-in-on-scroll">
             <div class="container">
                 <h2 class="fw-bold text-center mb-4">Our Success Stories</h2>
 
                 <div class="row g-4 text-center">
-
                     <div class="col-md-6">
-                        <div class="card h-100 shadow-sm p-3">
+                        <div class="card universal-card h-100 text-center">
+                            <div class="icon-circle icon-11">
+                                <img src="img/icon_5.png"
+                                    alt="Success story icon">
+                            </div>
+
                             <h5 class="fw-bold">Healthcare Cloud
                                 Transformation</h5>
                             <p>
@@ -176,54 +265,82 @@
                     </div>
 
                     <div class="col-md-6">
-                        <div class="card h-100 shadow-sm p-3">
+                        <div class="card universal-card h-100 text-center">
+                            <div class="icon-circle icon-12">
+                                <img src="img/icon_6.png"
+                                    alt="Success story icon">
+                            </div>
+
                             <h5 class="fw-bold">Retail Salesforce
                                 Modernization</h5>
                             <p>
                                 A major supermarket chain leveraged Salesforce
                                 Sales Cloud to enhance
                                 sales efficiency, streamline internal processes,
-                                and deliver
-                                multi-channel customer experiences across
-                                digital and in-store channels.
+                                and deliver multi-channel
+                                customer experiences across digital and in-store
+                                channels.
                             </p>
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </section>
 
-        <!-- EXISTING SECTIONS (Kept exactly the same) -->
+        <!-- OUR KEY SERVICES -->
         <section class="py-5 fade-in-on-scroll">
             <div class="container">
                 <h2 class="fw-bold text-center mb-4">Our Key Services</h2>
 
-                <div class="row g-4">
+                <div class="row g-4 text-center">
                     <div class="col-md-4">
-                        <div class="card h-100 shadow-sm p-3 text-center">
+                        <div class="card universal-card h-100">
+                            <div class="icon-circle icon-8">
+                                <img src="img/icon_7.png"
+                                    alt="IT Consulting icon">
+                            </div>
+
                             <h5 class="fw-bold">IT Consulting</h5>
-                            <p>Professional guidance to help modernize and
-                                optimize your business processes.</p>
+                            <p>
+                                Professional guidance to help modernize and
+                                optimize your business
+                                processes.
+                            </p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
-                        <div class="card h-100 shadow-sm p-3 text-center">
+                        <div class="card universal-card h-100">
+                            <div class="icon-circle icon-9">
+                                <img src="img/icon_8.png"
+                                    alt="Software Development icon">
+                            </div>
+
                             <h5 class="fw-bold">Software Development</h5>
-                            <p>Custom-built software tailored to your business
-                                requirements.</p>
+                            <p>
+                                Custom-built software tailored to your business
+                                requirements.
+                            </p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
-                        <div class="card h-100 shadow-sm p-3 text-center">
+                        <div class="card universal-card h-100">
+                            <div class="icon-circle icon-10">
+                                <img src="img/icon_9.png"
+                                    alt="Cloud Solutions icon">
+                            </div>
+
                             <h5 class="fw-bold">Cloud Solutions</h5>
-                            <p>Scalable cloud deployments for seamless and
-                                secure operations.</p>
+                            <p>
+                                Scalable cloud deployments for seamless and
+                                secure operations.
+                            </p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -232,38 +349,61 @@
             <div class="container">
                 <h2 class="fw-bold text-center mb-4">Why Choose Us?</h2>
 
-                <div class="row g-4">
+                <div class="row g-4 text-center">
                     <div class="col-md-4">
-                        <div class="card h-100 shadow-sm p-3 text-center">
+                        <div class="card universal-card h-100">
+                            <div class="icon-circle icon-5">
+                                <img src="img/icon_10.png"
+                                    alt="Experienced Team icon">
+                            </div>
+
                             <h5 class="fw-bold">Experienced Team</h5>
-                            <p>We bring deep industry expertise and innovative
-                                problem-solving skills.</p>
+                            <p>
+                                We bring deep industry expertise and innovative
+                                problem-solving skills.
+                            </p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
-                        <div class="card h-100 shadow-sm p-3 text-center">
+                        <div class="card universal-card h-100">
+                            <div class="icon-circle icon-6">
+                                <img src="img/icon_11.png"
+                                    alt="Client-Centered Approach icon">
+                            </div>
+
                             <h5 class="fw-bold">Client-Centered Approach</h5>
-                            <p>We focus on understanding your business goals and
-                                delivering measurable results.</p>
+                            <p>
+                                We focus on understanding your business goals
+                                and delivering measurable results.
+                            </p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
-                        <div class="card h-100 shadow-sm p-3 text-center">
+                        <div class="card universal-card h-100">
+                            <div class="icon-circle icon-7">
+                                <img src="img/icon_12.png"
+                                    alt="End-to-End Services icon">
+                            </div>
+
                             <h5 class="fw-bold">End-to-End Services</h5>
-                            <p>From consulting to deployment, we support your
-                                business at every step.</p>
+                            <p>
+                                From consulting to deployment, we support your
+                                business at every step.
+                            </p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- CTA SECTION -->
         <section class="py-5 bg-primary text-white fade-in-on-scroll">
             <div class="container text-center">
-                <h2 class="fw-bold mb-3">Ready to Transform Your Business?</h2>
+                <h2 class="fw-bold mb-3">Ready to Transform Your
+                    Business?</h2>
                 <p class="mb-4">Let’s work together to create innovative and
                     scalable solutions.</p>
                 <a href="contact.html" class="btn btn-light btn-lg">Get
@@ -285,7 +425,8 @@
                             <li><a href="services.html"
                                     class="footer-link">Application
                                     Modernization</a></li>
-                            <li><a href="services.html" class="footer-link">Data
+                            <li><a href="services.html"
+                                    class="footer-link">Data
                                     & Analytics</a></li>
                             <li><a href="services.html"
                                     class="footer-link">Modern
@@ -300,7 +441,8 @@
                     <div class="col-md-3 mb-4">
                         <h5 class="fw-bold mb-3">Who We Are</h5>
                         <ul class="list-unstyled footer-links">
-                            <li><a href="about.html" class="footer-link">About
+                            <li><a href="about.html"
+                                    class="footer-link">About
                                     Us</a></li>
                         </ul>
                     </div>
@@ -310,7 +452,8 @@
                         <h5 class="fw-bold mb-3">Follow Us</h5>
                         <div class="footer-social-container">
                             <a href="https://linkedin.com" target="_blank">
-                                <img src="img/linkedin.png" class="social-icon"
+                                <img src="img/linkedin.png"
+                                    class="social-icon"
                                     alt="LinkedIn">
                             </a>
                             <a href="https://x.com" target="_blank">
@@ -318,7 +461,8 @@
                                     alt="X">
                             </a>
                             <a href="https://facebook.com" target="_blank">
-                                <img src="img/facebook.png" class="social-icon"
+                                <img src="img/facebook.png"
+                                    class="social-icon"
                                     alt="Facebook">
                             </a>
                         </div>

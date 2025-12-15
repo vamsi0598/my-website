@@ -1,54 +1,129 @@
-/* HERO NEW BACKGROUND */
-.hero-section {
-    background: url("../img/hero-bg.jpg") center/cover no-repeat;
-    padding: 120px 0;
+/* ================= GLOBAL ================= */
+:root {
+    --accent: #0d6efd;
+    --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 18px 35px rgba(0, 0, 0, 0.14);
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ================= HERO ================= */
+.hero-wrapper {
+    background: url("../img/index1back.jpg") center/cover no-repeat;
     position: relative;
 }
 
-.hero-section::before {
+.hero-wrapper::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.55);
 }
 
-.hero-section .container {
+.hero-wrapper * {
     position: relative;
     z-index: 2;
 }
 
-/* STORY SECTION */
-.story-text {
-    font-size: 1.05rem;
-    margin-bottom: 1.2rem;
+.header-transparent {
+    background: transparent;
 }
 
-/* OFFER FULL-WIDTH BLOCKS */
-.offer-block .offer-item {
-    padding: 25px 20px;
-    background: var(--color-white);
-    border-left: 6px solid var(--color-accent);
-    border-radius: 8px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+.nav-link {
+    color: white !important;
+    font-weight: 600;
 }
 
-/* SUCCESS STORIES STRIPES */
-.success-stripe {
-    border-top: 1px solid #df0b0b;
-    border-bottom: 1px solid #ac0202;
+.hero-modern {
+    padding: 160px 0 120px;
 }
 
-/* footer adjustment for follow us unable to see images only white color */
-/* SOCIAL ICONS – FIXED SIZE + CLEAN LOOK */
-.social-icon {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    margin-right: 12px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
 }
 
-.social-icon:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
+.hero-subtitle {
+    font-size: 1.1rem;
+}
+
+.hero-side-img {
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+.hero-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 30px;
+    padding: 10px 25px;
+}
+
+/* ================= UNIVERSAL CARD (HOVER) ================= */
+.universal-card {
+    padding: 1.5rem;
+    border-radius: 14px;
+    border: none;
+    background: #fff;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.universal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* ================= ICON SYSTEM ================= */
+.icon-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.icon-circle img {
+    width: 36px;
+    height: 36px;
+}
+
+/* Pastel backgrounds */
+.icon-5 {
+    background: #e6fff6;
+}
+
+.icon-6 {
+    background: #f3edff;
+}
+
+.icon-7 {
+    background: #fff8e6;
+}
+
+.icon-8 {
+    background: #ffecec;
+}
+
+.icon-9 {
+    background: #eef5ff;
+}
+
+.icon-10 {
+    background: #f0fff4;
+}
+
+.icon-11 {
+    background: #fff0f6;
+}
+
+.icon-12 {
+    background: #f8f9fa;
 }
