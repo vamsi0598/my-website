@@ -15,9 +15,15 @@
 
         <!-- Navigation -->
         <header id="mainHeader"
-            class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+            class="navbar navbar-expand-lg navbar-solid sticky-top shadow-sm">
+
             <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">MyBiz</a>
+                <a class="navbar-brand d-flex align-items-center fw-bold"
+                    href="index.html">
+                    <img src="img/logo.png" alt="MyBiz Logo"
+                        style="width: 120px;">
+                    <span class="ms-2">Global Consulting Services</span>
+                </a>
 
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -29,11 +35,11 @@
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link"
                                 href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link"
+                        <li class="nav-item"><a class="nav-link active"
                                 href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link"
                                 href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link active"
+                        <li class="nav-item"><a class="nav-link"
                                 href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -89,16 +95,90 @@
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="bg-dark text-white py-4 mt-5">
-            <div class="container text-center">
-                <p class="mb-0">&copy; 2024 MyBiz. All rights reserved.</p>
+        <!-- FOOTER -->
+        <footer class="footer bg-dark text-white pt-5 pb-4">
+            <div class="container">
+
+                <div class="row text-center text-md-start">
+
+                    <!-- WHAT WE DO -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="fw-bold mb-3">What We Do</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="services.html"
+                                    class="footer-link">Application
+                                    Modernization</a></li>
+                            <li><a href="services.html"
+                                    class="footer-link">Data
+                                    & Analytics</a></li>
+                            <li><a href="services.html"
+                                    class="footer-link">Modern
+                                    Workplace</a></li>
+                            <li><a href="services.html"
+                                    class="footer-link">Salesforce
+                                    Services</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- WHO WE ARE -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="fw-bold mb-3">Who We Are</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="about.html"
+                                    class="footer-link">About
+                                    Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- FOLLOW US and adjust the image size smaller -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="fw-bold mb-3">Follow Us</h5>
+                        <div class="footer-social-container">
+                            <a href="https://linkedin.com" target="_blank">
+                                <img src="img/linkedin.png"
+                                    class="social-icon"
+                                    alt="LinkedIn">
+                            </a>
+                            <a href="https://x.com" target="_blank">
+                                <img src="img/x.png" class="social-icon"
+                                    alt="X">
+                            </a>
+                            <a href="https://facebook.com" target="_blank">
+                                <img src="img/facebook.png"
+                                    class="social-icon"
+                                    alt="Facebook">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- CONTACT US -->
+                    <div class="col-md-3 mb-4">
+                        <h5 class="fw-bold mb-3">Contact Us</h5>
+                        <p class="mb-1">USA Office:</p>
+                        <p class="small mb-2">
+                            123 Business Street<br>
+                            Suite 200<br>
+                            Dallas, TX 75001
+                        </p>
+
+                        <p class="mb-1">Phone:</p>
+                        <p class="small mb-2">(123) 456-7890</p>
+
+                        <p class="mb-1">Email:</p>
+                        <p class="small mb-0">info@mybiz.com</p>
+                    </div>
+
+                </div>
+
+                <hr class="border-secondary mt-4 mb-3">
+
+                <div class="text-center small">
+                    &copy; 2024 MyBiz. All rights reserved.
+                </div>
+
             </div>
         </footer>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
 
     </body>
 </html>

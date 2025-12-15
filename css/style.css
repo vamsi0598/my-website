@@ -176,3 +176,87 @@ body {
     transform: scale(1.1);
     opacity: 0.8;
 }
+
+/* ================= SOLID NAVBAR (ABOUT / INNER PAGES) ================= */
+.navbar-solid {
+    background: #ffffff;
+}
+
+.navbar-solid .nav-link {
+    color: #212529 !important;
+    font-weight: 600;
+}
+
+.navbar-solid .nav-link.active {
+    color: var(--accent) !important;
+    font-weight: 700;
+}
+
+.navbar-solid .navbar-brand {
+    color: #212529 !important;
+}
+
+
+/* ================= ABOUT STORY SECTION ================= */
+.about-story {
+    background: url("../img/aboutus2back.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+/* Dark overlay for readability */
+.about-story::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* Keep content above overlay */
+.about-story .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Improve text readability */
+.about-story h2,
+.about-story p {
+    color: #ffffff;
+}
+
+/* ================= ABOUT HIGHLIGHT SECTION ================= */
+.about-highlight {
+    background: url("../img/aboutus1back.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+/* Overlay for readability */
+.about-highlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Keep content above overlay */
+.about-highlight .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Section headings stay white */
+.about-highlight h2 {
+    color: #ffffff;
+}
+
+/* Cards override white text */
+.about-highlight .card {
+    background: #ffffff;
+    color: #212529;
+}
+
+/* Ensure card text is dark */
+.about-highlight .card h5,
+.about-highlight .card h6,
+.about-highlight .card p {
+    color: #212529;
+}
