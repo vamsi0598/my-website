@@ -64,19 +64,32 @@ body {
     padding: 10px 25px;
 }
 
-/* ================= UNIVERSAL CARD (HOVER) ================= */
+/* ======================================================
+   UNIVERSAL HOVER SYSTEM (APPLIES TO ALL CARDS)
+   ====================================================== */
+
+/* Covers:
+   - Who We Are
+   - What We Offer
+   - Our Success Stories
+   - Our Key Services
+   - Why Choose Us
+*/
+.card,
 .universal-card {
-    padding: 1.5rem;
-    border-radius: 14px;
-    border: none;
-    background: #fff;
-    box-shadow: var(--shadow-soft);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover,
 .universal-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-hover);
+}
+
+/* Prevent layout jump */
+.card,
+.universal-card {
+    will-change: transform;
 }
 
 /* ================= ICON SYSTEM ================= */
@@ -93,9 +106,26 @@ body {
 .icon-circle img {
     width: 36px;
     height: 36px;
+    object-fit: contain;
 }
 
-/* Pastel backgrounds */
+/* ================= ICON COLORS ================= */
+.icon-1 {
+    background: #e6fff6;
+}
+
+.icon-2 {
+    background: #f3edff;
+}
+
+.icon-3 {
+    background: #fff8e6;
+}
+
+.icon-4 {
+    background: #ffecec;
+}
+
 .icon-5 {
     background: #e6fff6;
 }
@@ -126,4 +156,23 @@ body {
 
 .icon-12 {
     background: #f8f9fa;
+}
+
+/* ================= OFFER SECTION TUNING ================= */
+.offer-icons .card {
+    border: none;
+}
+
+/* ================= FOOTER SOCIAL ICONS ================= */
+.social-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-right: 12px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
