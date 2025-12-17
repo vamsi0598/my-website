@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Careers - MyBiz</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar -->
+        <header id="mainHeader"
+            class="navbar navbar-expand-lg navbar-solid sticky-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center fw-bold"
+                    href="index.html">
+                    <img src="img/logo.png" alt="MyBiz Logo"
+                        style="width: 120px" />
+                    <span class="ms-2">Global Consulting Services</span>
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end"
+                    id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link"
+                                href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active"
+                                href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero-section bg-primary text-white py-5">
+            <div class="container">
+                <h1 class="display-5 fw-bold mb-3">Careers</h1>
+                <p class="lead mb-0">Take the next step with us; your journey
+                    starts here.</p>
+            </div>
+        </section>
+
+        <!-- Culture Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <h2 class="fw-bold mb-3">Life at Global Consulting
+                            Services</h2>
+                        <p>
+                            Our people are our greatest asset. We collaborate,
+                            learn continuously,
+                            and deliver high-impact outcomes using modern
+                            technologies.
+                        </p>
+                        <p class="mb-0">
+                            We value ownership, integrity, and a customer-first
+                            mindset.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="card universal-card p-4 h-100">
+                            <h5 class="fw-bold mb-3">Departments We Hire
+                                For</h5>
+                            <ul class="mb-0">
+                                <li>Software Engineering</li>
+                                <li>Cloud & DevOps</li>
+                                <li>Data & Analytics</li>
+                                <li>Business Analysis</li>
+                                <li>QA / Automation</li>
+                                <li>Sales & Customer Success</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Job Listings -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="fw-bold mb-4">Open Positions</h2>
+
+                <div class="job-list">
+
+                    <!-- Job 1 -->
+                    <div class="job-card">
+                        <div class="job-card-top job-toggle">
+                            <div>
+                                <h5 class="fw-bold mb-1">Business Analyst</h5>
+                                <div class="text-muted">USA • Full Time</div>
+                            </div>
+                            <span class="text-muted small">Click to view</span>
+                        </div>
+
+                        <div class="job-details">
+                            <h6 class="fw-bold mb-2">Roles &
+                                Responsibilities</h6>
+                            <ul>
+                                <li>Gather requirements (BRD/FRD), write user
+                                    stories, and manage backlog.</li>
+                                <li>Coordinate with development and QA teams;
+                                    support UAT, releases, and stakeholder
+                                    updates.</li>
+                                <li>Perform data validation and reporting
+                                    support using SQL.</li>
+                            </ul>
+
+                            <form id="resumeForm">
+                                <input type="text" id="name"
+                                    placeholder="Full Name" required />
+                                <input type="email" id="email"
+                                    placeholder="Email Address" required />
+                                <input type="file" id="resume"
+                                    accept=".pdf,.doc,.docx" required />
+                                <button type="submit">Apply</button>
+                            </form>
+
+                            <p id="statusMessage"></p>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="job-card">
+                        <div class="job-card-top job-toggle">
+                            <div>
+                                <h5 class="fw-bold mb-1">Application
+                                    Developer</h5>
+                                <div class="text-muted">USA • Contract to
+                                    Hire</div>
+                            </div>
+                            <span class="text-muted small">Click to view</span>
+                        </div>
+
+                        <div class="job-details">
+                            <h6 class="fw-bold mb-2">Roles &
+                                Responsibilities</h6>
+                            <ul>
+                                <li>Build and maintain web applications using
+                                    modern frameworks.</li>
+                                <li>Write clean, testable code and participate
+                                    in code reviews.</li>
+                                <li>Support CI/CD pipelines and production
+                                    deployments.</li>
+                            </ul>
+
+                            <form id="resumeForm">
+                                <input type="text" id="name"
+                                    placeholder="Full Name" required />
+                                <input type="email" id="email"
+                                    placeholder="Email Address" required />
+                                <input type="file" id="resume"
+                                    accept=".pdf,.doc,.docx" required />
+                                <button type="submit">Apply</button>
+                            </form>
+
+                            <p id="statusMessage"></p>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="job-card">
+                        <div class="job-card-top job-toggle">
+                            <div>
+                                <h5 class="fw-bold mb-1">SQL Tuning & Mainframe
+                                    DBA</h5>
+                                <div class="text-muted">USA • Contract</div>
+                            </div>
+                            <span class="text-muted small">Click to view</span>
+                        </div>
+
+                        <div class="job-details">
+                            <h6 class="fw-bold mb-2">Roles &
+                                Responsibilities</h6>
+                            <ul>
+                                <li>Optimize SQL performance and analyze query
+                                    plans.</li>
+                                <li>Support database reliability, monitoring,
+                                    and incident resolution.</li>
+                                <li>Work with engineering teams on performance
+                                    improvements.</li>
+                            </ul>
+
+                            <form id="resumeForm">
+                                <input type="text" id="name"
+                                    placeholder="Full Name" required />
+                                <input type="email" id="email"
+                                    placeholder="Email Address" required />
+                                <input type="file" id="resume"
+                                    accept=".pdf,.doc,.docx" required />
+                                <button type="submit">Apply</button>
+                            </form>
+
+                            <p id="statusMessage"></p>
+                        </div>
+                    </div>
+
+                    <!-- Job 4 -->
+                    <div class="job-card">
+                        <div class="job-card-top job-toggle">
+                            <div>
+                                <h5 class="fw-bold mb-1">Full Stack
+                                    Developer</h5>
+                                <div class="text-muted">USA • Full Time</div>
+                            </div>
+                            <span class="text-muted small">Click to view</span>
+                        </div>
+
+                        <div class="job-details">
+                            <h6 class="fw-bold mb-2">Roles &
+                                Responsibilities</h6>
+                            <ul>
+                                <li>Develop scalable web applications using Java
+                                    / Spring Boot and React.</li>
+                                <li>Build REST APIs and integrate third-party
+                                    services.</li>
+                                <li>Participate in code reviews and Agile
+                                    ceremonies.</li>
+                            </ul>
+
+                            <form id="resumeForm">
+                                <input type="text" id="name"
+                                    placeholder="Full Name" required />
+                                <input type="email" id="email"
+                                    placeholder="Email Address" required />
+                                <input type="file" id="resume"
+                                    accept=".pdf,.doc,.docx" required />
+                                <button type="submit">Apply</button>
+                            </form>
+
+                            <p id="statusMessage"></p>
+                        </div>
+                    </div>
+
+                    <!-- Job 5 -->
+                    <div class="job-card">
+                        <div class="job-card-top job-toggle">
+                            <div>
+                                <h5 class="fw-bold mb-1">DevOps Engineer</h5>
+                                <div class="text-muted">USA • Contract</div>
+                            </div>
+                            <span class="text-muted small">Click to view</span>
+                        </div>
+
+                        <div class="job-details">
+                            <h6 class="fw-bold mb-2">Roles &
+                                Responsibilities</h6>
+                            <ul>
+                                <li>Design and maintain CI/CD pipelines.</li>
+                                <li>Manage AWS infrastructure and containerized
+                                    workloads.</li>
+                                <li>Ensure system reliability and
+                                    monitoring.</li>
+                            </ul>
+
+                            <form id="resumeForm">
+                                <input type="text" id="name"
+                                    placeholder="Full Name" required />
+                                <input type="email" id="email"
+                                    placeholder="Email Address" required />
+                                <input type="file" id="resume"
+                                    accept=".pdf,.doc,.docx" required />
+                                <button type="submit">Apply</button>
+                            </form>
+
+                            <p id="statusMessage"></p>
+                        </div>
+                    </div>
+
+                    <!-- Job 6 -->
+                    <div class="job-card">
+                        <div class="job-card-top job-toggle">
+                            <div>
+                                <h5 class="fw-bold mb-1">QA Automation
+                                    Engineer</h5>
+                                <div class="text-muted">USA • Contract to
+                                    Hire</div>
+                            </div>
+                            <span class="text-muted small">Click to view</span>
+                        </div>
+
+                        <div class="job-details">
+                            <h6 class="fw-bold mb-2">Roles &
+                                Responsibilities</h6>
+                            <ul>
+                                <li>Design and execute automated test
+                                    suites.</li>
+                                <li>Collaborate with developers to improve test
+                                    coverage.</li>
+                                <li>Participate in regression and release
+                                    testing.</li>
+                            </ul>
+
+                            <form id="resumeForm">
+                                <input type="text" id="name"
+                                    placeholder="Full Name" required />
+                                <input type="email" id="email"
+                                    placeholder="Email Address" required />
+                                <input type="file" id="resume"
+                                    accept=".pdf,.doc,.docx" required />
+                                <button type="submit">Apply</button>
+                            </form>
+
+                            <p id="statusMessage"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer bg-dark text-white pt-5 pb-4">
+            <div class="container text-center">
+                <p class="small mb-0">&copy; 2024 MyBiz. All rights
+                    reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Click-to-expand Script -->
+        <script>
+    document.querySelectorAll(".job-toggle").forEach(toggle => {
+        toggle.addEventListener("click", () => {
+            const details = toggle.nextElementSibling;
+            details.classList.toggle("active");
+        });
+    });
+</script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+  const form = document.getElementById("resumeForm");
+  const statusMessage = document.getElementById("statusMessage");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const fileInput = document.getElementById("resume");
+    const file = fileInput.files[0];
+
+    if (!file) {
+      statusMessage.innerText = "Please select a resume file.";
+      return;
+    }
+
+    try {
+      statusMessage.innerText = "Uploading resume...";
+
+      const response = await fetch(
+        "https://gv7sr22u55.execute-api.us-east-2.amazonaws.com/prod/upload",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": file.type,
+            "x-filename": file.name
+          },
+          body: await file.arrayBuffer()
+        }
+      );
+
+      const result = await response.text();
+
+      if (response.ok) {
+        statusMessage.innerText = "Resume uploaded successfully!";
+        form.reset();
+      } else {
+        statusMessage.innerText = result;
+      }
+
+    } catch (error) {
+      console.error(error);
+      statusMessage.innerText = "Upload failed. Please try again later.";
+    }
+  });
+</script>
+    </body>
+</html>

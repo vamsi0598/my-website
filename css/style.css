@@ -316,7 +316,40 @@ body {
     display: none;
 }
 
-/* show details on hover */
-.job-card:hover .job-details {
+.job-details {
+    display: none;
+}
+
+.job-details.active {
     display: block;
+}
+
+
+/* ================= JOB LIST SCROLL FIX ================= */
+
+.job-list-wrapper {
+    max-height: 520px;
+    /* controls visible height */
+    overflow-y: auto;
+    /* enables vertical scroll */
+    padding-right: 6px;
+    /* avoids scrollbar overlap */
+}
+
+/* smoother scrolling */
+.job-list-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.job-list-wrapper::-webkit-scrollbar-thumb {
+    background: #cfd4da;
+    border-radius: 4px;
+}
+
+.job-list-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #adb5bd;
+}
+
+.job-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
