@@ -64,7 +64,7 @@ PY
 
                     . "$WORKSPACE/.tools/env.sh"
                     aws --version
-                    kubectl version --client=true --short
+                    kubectl version --client=true
                 '''
             }
         }
