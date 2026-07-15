@@ -46,6 +46,7 @@ import zipfile
 with zipfile.ZipFile('/tmp/awscliv2.zip') as archive:
     archive.extractall('/tmp/awscli')
 PY
+                            chmod +x /tmp/awscli/aws/install
                             /tmp/awscli/aws/install -i "$WORKSPACE/.tools/aws" -b "$WORKSPACE/.tools/bin"
                             rm -rf /tmp/awscli /tmp/awscliv2.zip
                         fi
