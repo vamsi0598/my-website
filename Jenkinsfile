@@ -7,19 +7,56 @@ pipeline {
 
     environment {
         AWS_REGION = 'us-east-1'
-        ECR_REGION = 'us-east-2'
+        ECR_REGION = 'us-east-1'
         EKS_CLUSTER_NAME = 'my-cluster3'
         K8S_NAMESPACE = 'mywebsite'
         K8S_DEPLOYMENT = 'mywebsite'
         K8S_CONTAINER = 'nginx'
-        ECR_REGISTRY = '323022619728.dkr.ecr.us-east-2.amazonaws.com'
-        ECR_REPOSITORY = 'mysecondrepo'
+        ECR_REGISTRY = '323022619728.dkr.ecr.us-east-1.amazonaws.com'
+        ECR_REPOSITORY = 'my-webserver3'
     }
 
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
+            }
+        }
+
+        stage('Prepare CLI Tools') {
+            steps {
+                sh '''
+                    set -e
+
+                    mkdir -p "$WORKSPACE/.tools/bin"
+
+                    cat > "$WORKSPACE/.tools/env.sh" <<EOF
+export PATH="$WORKSPACE/.tools/bin:$PATH"
+EOF
+
+                    chmod +x "$WORKSPACE/.tools/env.sh"
+
+                    if ! command -v aws >/dev/null 2>&1; then
+                        if [ ! -x "$WORKSPACE/.tools/bin/aws" ]; then
+                            curl -sSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o /tmp/awscliv2.zip
+                            rm -rf /tmp/awscli
+                            unzip -q /tmp/awscliv2.zip -d /tmp/awscli
+                            /tmp/awscli/aws/install -i "$WORKSPACE/.tools/aws" -b "$WORKSPACE/.tools/bin"
+                            rm -rf /tmp/awscli /tmp/awscliv2.zip
+                        fi
+                    fi
+
+                    if ! command -v kubectl >/dev/null 2>&1; then
+                        if [ ! -x "$WORKSPACE/.tools/bin/kubectl" ]; then
+                            curl -sSL -o "$WORKSPACE/.tools/bin/kubectl" "https://dl.k8s.io/release/v1.30.2/bin/linux/amd64/kubectl"
+                            chmod +x "$WORKSPACE/.tools/bin/kubectl"
+                        fi
+                    fi
+
+                    . "$WORKSPACE/.tools/env.sh"
+                    aws --version
+                    kubectl version --client=true --short
+                '''
             }
         }
 
@@ -40,6 +77,8 @@ pipeline {
         stage('Login to ECR and Push Image') {
             steps {
                 sh '''
+                    . "$WORKSPACE/.tools/env.sh"
+
                     aws ecr get-login-password --region "$ECR_REGION" \
                         | docker login --username AWS --password-stdin "$ECR_REGISTRY"
 
@@ -55,6 +94,8 @@ pipeline {
         stage('Deploy to EKS') {
             steps {
                 sh '''
+                    . "$WORKSPACE/.tools/env.sh"
+
                     aws eks update-kubeconfig --region "$AWS_REGION" --name "$EKS_CLUSTER_NAME"
                     kubectl apply -k k8s
                     kubectl set image deployment/"$K8S_DEPLOYMENT" \
