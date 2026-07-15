@@ -39,33 +39,29 @@ pipeline {
 
         stage('Login to ECR and Push Image') {
             steps {
-                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-deploy-creds']]) {
-                    sh '''
-                        aws ecr get-login-password --region "$ECR_REGION" \
-                            | docker login --username AWS --password-stdin "$ECR_REGISTRY"
+                sh '''
+                    aws ecr get-login-password --region "$ECR_REGION" \
+                        | docker login --username AWS --password-stdin "$ECR_REGISTRY"
 
-                        docker tag "$ECR_REPOSITORY:$IMAGE_TAG" "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-                        docker tag "$ECR_REPOSITORY:$IMAGE_TAG" "$ECR_REGISTRY/$ECR_REPOSITORY:latest"
+                    docker tag "$ECR_REPOSITORY:$IMAGE_TAG" "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+                    docker tag "$ECR_REPOSITORY:$IMAGE_TAG" "$ECR_REGISTRY/$ECR_REPOSITORY:latest"
 
-                        docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-                        docker push "$ECR_REGISTRY/$ECR_REPOSITORY:latest"
-                    '''
-                }
+                    docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+                    docker push "$ECR_REGISTRY/$ECR_REPOSITORY:latest"
+                '''
             }
         }
 
         stage('Deploy to EKS') {
             steps {
-                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-deploy-creds']]) {
-                    sh '''
-                        aws eks update-kubeconfig --region "$AWS_REGION" --name "$EKS_CLUSTER_NAME"
-                        kubectl apply -k k8s
-                        kubectl set image deployment/"$K8S_DEPLOYMENT" \
-                            "$K8S_CONTAINER"="$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" \
-                            -n "$K8S_NAMESPACE"
-                        kubectl rollout status deployment/"$K8S_DEPLOYMENT" -n "$K8S_NAMESPACE" --timeout=5m
-                    '''
-                }
+                sh '''
+                    aws eks update-kubeconfig --region "$AWS_REGION" --name "$EKS_CLUSTER_NAME"
+                    kubectl apply -k k8s
+                    kubectl set image deployment/"$K8S_DEPLOYMENT" \
+                        "$K8S_CONTAINER"="$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" \
+                        -n "$K8S_NAMESPACE"
+                    kubectl rollout status deployment/"$K8S_DEPLOYMENT" -n "$K8S_NAMESPACE" --timeout=5m
+                '''
             }
         }
     }
