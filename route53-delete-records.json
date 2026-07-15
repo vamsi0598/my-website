@@ -1,0 +1,54 @@
+{
+    "Changes": [
+        {
+            "Action": "DELETE",
+            "ResourceRecordSet": {
+                "Name": "vamsi.click.",
+                "Type": "A",
+                "AliasTarget": {
+                    "HostedZoneId": "Z35SXDOTRQ7X7K",
+                    "DNSName": "dualstack.k8s-mywebsit-mywebsit-828b5463e0-529742011.us-east-1.elb.amazonaws.com.",
+                    "EvaluateTargetHealth": true
+                }
+            }
+        },
+        {
+            "Action": "DELETE",
+            "ResourceRecordSet": {
+                "Name": "www.vamsi.click.",
+                "Type": "A",
+                "AliasTarget": {
+                    "HostedZoneId": "Z35SXDOTRQ7X7K",
+                    "DNSName": "dualstack.k8s-mywebsit-mywebsit-828b5463e0-529742011.us-east-1.elb.amazonaws.com.",
+                    "EvaluateTargetHealth": true
+                }
+            }
+        },
+        {
+            "Action": "DELETE",
+            "ResourceRecordSet": {
+                "Name": "_55fa401801662127a9b3b8a894c0f4a4.vamsi.click.",
+                "Type": "CNAME",
+                "TTL": 300,
+                "ResourceRecords": [
+                    {
+                        "Value": "_5693a360373412de481d47b47452cc56.jkddzztszm.acm-validations.aws."
+                    }
+                ]
+            }
+        },
+        {
+            "Action": "DELETE",
+            "ResourceRecordSet": {
+                "Name": "_ed9a9f607cf2a62fbecfb80c41a05045.www.vamsi.click.",
+                "Type": "CNAME",
+                "TTL": 300,
+                "ResourceRecords": [
+                    {
+                        "Value": "_5de813ee6db9b8dccdbb5f9b4225dbf1.jkddzztszm.acm-validations.aws."
+                    }
+                ]
+            }
+        }
+    ]
+}
