@@ -40,14 +40,17 @@ EOF
                         if [ ! -x "$WORKSPACE/.tools/bin/aws" ]; then
                             curl -sSL "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o /tmp/awscliv2.zip
                             rm -rf /tmp/awscli
+                            rm -rf "$WORKSPACE/.tools/aws"
+                            rm -f "$WORKSPACE/.tools/bin/aws"
                             python3 - <<'PY'
 import zipfile
 
 with zipfile.ZipFile('/tmp/awscliv2.zip') as archive:
     archive.extractall('/tmp/awscli')
 PY
+                            chmod +x /tmp/awscli/aws/dist/aws
                             chmod +x /tmp/awscli/aws/install
-                            /tmp/awscli/aws/install -i "$WORKSPACE/.tools/aws" -b "$WORKSPACE/.tools/bin"
+                            /tmp/awscli/aws/install --update -i "$WORKSPACE/.tools/aws" -b "$WORKSPACE/.tools/bin"
                             rm -rf /tmp/awscli /tmp/awscliv2.zip
                         fi
                     fi
